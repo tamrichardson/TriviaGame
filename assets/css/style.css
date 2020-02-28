@@ -24,6 +24,11 @@ height: 50%;
     font-family: 'Caveat';
   }
 
+
+  .card {
+    background-color:rgb(198, 150, 230); 
+  }
+
   .card-columns {
   @include media-breakpoint-only(lg) {
     column-count: 4;
