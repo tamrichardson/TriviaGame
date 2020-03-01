@@ -1,4 +1,4 @@
-var questionsAnswers = [
+var question = [
     {   //1
         question: "What is the name of the man Rachel almost marries?",
         answers: {
@@ -121,14 +121,40 @@ var questionsAnswers = [
     }
 ];
 
+var correctAnswers = 0;
+var incorrectAnswers = 0;
+var currentQuestion
+var shuffledQuestion
+
+//start the game
+var startButton = document.getElementById("start-btn")
+startButton.addEventListener("click", startQuiz)
+var questionContainer = document.getElementById
+    ("question-container")
+
+function startQuiz() {
+    console.log("started")
+    questionContainer.classList.remove("hide")
+    //new question
+    newQuestion();
+    reset();
+}
+
+function newQuestion() {
+
+}
+
+function selectAnswer() {
+
+}
+
+
 //timer
 var counter = 30
 
 var myTimer = setInterval(function () {
-
-    //we want to count down from 10 to 0 each second 
+    //we want to count down from 30 to 0 each second 
     //use counter variable which decrements every second used to update the html
-
     counter--
     console.log(counter)
     //use jQuery to update HTML
@@ -146,3 +172,60 @@ function reset() {
     myTimer
     counter = 30
 }
+
+//display questions
+//i want a question to appear
+//i want a new question to appear when an answer button is clicked
+function newQuestion() {
+    //store the total number of questions
+    var totalQuestions = $("question.length");
+    //set the current question to display to 1
+    var currentQuestions = 0;
+    //store the selector in a variable
+    $question = $("question");
+    //hide all the questions
+    $question.hide();
+    //attach a click listener to the html element with the id of next
+    $("next").click(function () {
+        //fade out the current question,
+        //putting a function inside of fadeOut calls that function 
+        //immediately after fadeOut is completed, 
+        //this is for a smoother transition animation
+        $($questions.get(currentQuestion)).fadeOut(function () {
+
+            //increment the current question by one
+            currentQuestion = currentQuestion + 1;
+
+            //if there are no more questions do stuff
+            if (currentQuestion == totalQuestions) {
+
+                var result = sum_values()
+
+                //do stuff with the result
+                alert(result);
+
+            } else {
+
+                //otherwise show the next question
+                $($questions.get(currentQuestion)).fadeIn();
+
+            }
+        });
+
+
+    });
+
+    function rightAnswer() {
+        correctAnswers++;
+        $("#correct").text(correctAnswers);
+
+    }
+
+    function wrongAnswer() {
+        incorrectAnswers++;
+        $("#incorrect").text(incorrectAnswers);
+
+    }
+}
+
+

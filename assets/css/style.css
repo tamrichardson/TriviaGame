@@ -40,7 +40,7 @@ height: 50%;
 
   button {
     color: black;
-    font-size: 100px;
+    font-size: 200px;
     font-family: 'Caveat';
   }
 
@@ -48,6 +48,17 @@ height: 50%;
     color: black;
     font-size: 100px;
     font-family: 'Caveat';
+  }
+
+  .btn-grid {
+display: grid;
+grid-template-columns: repeat(2, auto);
+gap: 10px;
+
+  }
+
+  .hide {
+    display: none;
   }
   
   .card-columns {

@@ -29,19 +29,22 @@
             <div class="timeRemaining">
                 <h5 class="text-center">Time remaining: <span id="time">0</span></h5>
             </div>
+            <button type="button" class="btn btn-warning" id="start-btn">Click to begin</button>
         </div>
         <div class="card">
             <img src="assets\images\frame.jpg" class="card-img-top" alt="frame">
 
-            <div id="question">
-                <h5 class="card-title">display ? here</h5>
-            </div>
+            <div id="question-container" class="hide">
+                <div id="question">Question</div>
+                <div class="controls"></div>
 
-            <div class="choices">
-                <button type="button" class="btn btn-warning" onclick="reset()">A</button>
-                <button type="button" class="btn btn-warning" onclick="reset()">B</button>
-                <button type="button" class="btn btn-warning" onclick="reset()">C</button>
-                <button type="button" class="btn btn-warning" onclick="reset()">D</button>
+
+                <div class="choice-buttons" class="btn-grid">
+                    <button type="button" class="btn btn-warning" onclick="reset()">A</button>
+                    <button type="button" class="btn btn-warning" onclick="reset()">B</button>
+                    <button type="button" class="btn btn-warning" onclick="reset()">C</button>
+                    <button type="button" class="btn btn-warning" onclick="reset()">D</button>
+                </div>
             </div>
         </div>
         <div class="card">
