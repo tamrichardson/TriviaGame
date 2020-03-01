@@ -1,7 +1,5 @@
 body {
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
+    
     background-color:rgb(198, 150, 230);
 }
 
@@ -27,8 +25,29 @@ height: 50%;
 
   .card {
     background-color:rgb(198, 150, 230); 
+    color: black;
+    font-size: 50px;
+    font-family: 'Caveat';
   }
 
+  h5 {
+    color: black;
+    font-size: 50px;
+    font-family: 'Caveat';
+  }
+
+  button {
+    color: black;
+    font-size: 100px;
+    font-family: 'Caveat';
+  }
+
+  p {
+    color: black;
+    font-size: 100px;
+    font-family: 'Caveat';
+  }
+  
   .card-columns {
   @include media-breakpoint-only(lg) {
     column-count: 4;

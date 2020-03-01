@@ -1,4 +1,4 @@
-var questions = [
+var questionsAnswers = [
     {   //1
         question: "What is the name of the man Rachel almost marries?",
         answers: {
@@ -121,20 +121,28 @@ var questions = [
     }
 ];
 
+//timer
+var counter = 30
 
-var answers
-var correct
-var incorrect
-var timer
-var seconds = 0;
-var interval;
+var myTimer = setInterval(function () {
 
-function buildQuiz()
+    //we want to count down from 10 to 0 each second 
+    //use counter variable which decrements every second used to update the html
 
-function showResults()
+    counter--
+    console.log(counter)
+    //use jQuery to update HTML
+    //grab location from HTML and the use .text to diplay counter variable
+    $("#time").text(counter)
+    //to get the interval to start over again
+    if (counter == 0) {
+        //reset()
+        clearInterval(myTimer)
+    }
+}, 1000);
 
-// display quiz right away
-buildQuiz();
-
-// on submit, show results
-submitButton.addEventListener('click', showResults);
+function reset() {
+    //calling myTimer to reset the interval and the counter
+    myTimer
+    counter = 30
+}

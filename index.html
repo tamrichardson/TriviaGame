@@ -25,34 +25,27 @@
 
     <div class="card-deck">
         <div class="card">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="timer">
-                <h5 class="card-title">Time remaining:</h5>
-                <div id="countDown">
-                    <h4> </h4>
-                </div>
-
-
+            <img src="assets\images\teaching-english-with-friends-tv-series.jpg" class="card-img-top" alt="...">
+            <div class="timeRemaining">
+                <h5 class="text-center">Time remaining: <span id="time">0</span></h5>
+                <button class="btn btn-warning" onclick="reset()">reset counter</button>
             </div>
         </div>
         <div class="card">
             <img src="assets\images\frame.jpg" class="card-img-top" alt="frame">
             <div class="card-body">
-                
+
                 <h5 class="card-title">Choose your answer</h5>
-                <button type="button" class="btn btn-warning">Warning</button>
-                <button type="button" class="btn btn-warning">Warning</button>
-                <button type="button" class="btn btn-warning">Warning</button>
-                <button type="button" class="btn btn-warning">Warning</button>
+                <button type="button" class="btn btn-warning">A</button>
+                <button type="button" class="btn btn-warning">B</button>
+                <button type="button" class="btn btn-warning">C</button>
+                <button type="button" class="btn btn-warning">D</button>
             </div>
         </div>
         <div class="card">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">correct answers:</h5>
-                <h5 class="card-title">incorrect answers:</h5>
-
-            </div>
+            <img src="assets\images\window.jpg" class="card-img-top" alt="...">
+            <div class="text-center">Correct: <span id="correct">0</span></div>
+            <div class="text-center">Incorrect: <span id="incorrect">0</span></div>
         </div>
     </div>
 
@@ -68,8 +61,7 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
 
-    <script>
-        src = "assets\javascript\app.js"
+    <script src="assets\javascript\app.js"></script>
     </script>
 </body>
 
