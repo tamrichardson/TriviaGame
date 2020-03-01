@@ -124,7 +124,9 @@ var question = [
 var correctAnswers = 0;
 var incorrectAnswers = 0;
 var currentQuestion
-var shuffledQuestion
+//var shuffledQuestion
+var questionElement = document.getElementById("question")
+var questionElement = document.getElementById("choice-buttons")
 
 //start the game
 var startButton = document.getElementById("start-btn")
@@ -133,15 +135,26 @@ var questionContainer = document.getElementById
     ("question-container")
 
 function startQuiz() {
-    console.log("started")
-    questionContainer.classList.remove("hide")
+    console.log("started");
+    //this will unhide the question and answer button when start button is clicked
+    questionContainer.classList.remove("hide");
+    //this will shuffle the questions
+    //shuffledQuestions = question.sort(() => Math.random() - .5);
+    currentQuestionIndex = 0;
+    //displays question in question div on card
+    $("#question").text(question);
     //new question
     newQuestion();
     reset();
 }
 
 function newQuestion() {
+    showQuestion(question[currentQuestionIndex])
 
+}
+
+function showQuestion(question) {
+    questionElement.innerText = question.question
 }
 
 function selectAnswer() {
