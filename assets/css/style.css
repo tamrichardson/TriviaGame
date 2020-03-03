@@ -51,10 +51,19 @@ height: 50%;
   }
   p {
     color: black;
-    font-size: 40px;
+    font-size: 30px;
     font-family: 'Caveat';
   }
 
+  h1 {
+    color: yellow;
+    font-size: 30px;
+    font-family: 'Caveat';
+  }
+
+  #after-submit {
+    visibility:hidden;
+  }
 
   
   .card-columns {
