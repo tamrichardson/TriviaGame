@@ -44,22 +44,18 @@ height: 50%;
     font-family: 'Caveat';
   }
 
+  .form-check-label {
+    color: black;
+    font-size: 25px;
+    font-family: 'Caveat';
+  }
   p {
     color: black;
-    font-size: 100px;
+    font-size: 40px;
     font-family: 'Caveat';
   }
 
-  .btn-grid {
-display: grid;
-grid-template-columns: repeat(2, auto);
-gap: 10px;
 
-  }
-
-  .hide {
-    display: none;
-  }
   
   .card-columns {
   @include media-breakpoint-only(lg) {
