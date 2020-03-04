@@ -41,7 +41,28 @@ function checkAnswers() {
         correct++;
         console.log("Gunther");
     }
+    if (document.getElementById("inlineRadio21").checked) {
+        correct++;
+        console.log("Seven");
+    }
+    if (document.getElementById("inlineRadio27").checked) {
+        correct++;
+        console.log("Masseuse");
+    }
+    if (document.getElementById("inlineRadio32").checked) {
+        correct++;
+        console.log("Paris");
+    }
 
+    if (document.getElementById("inlineRadio34").checked) {
+        correct++;
+        console.log("Ugly Naked Guy");
+    }
+
+    if (document.getElementById("inlineRadio38").checked) {
+        correct++;
+        console.log("Alcohol");
+    }
     document.getElementById("after-submit").style.visibility = "visible";
     document.getElementById("number-correct").innerHTML = "You got " + correct + " correct.";
     endGame()
@@ -73,7 +94,7 @@ var myTimer = setInterval(function () {
 function reset() {
     //calling myTimer to reset the interval and the counter
     myTimer
-    counter = 30
+    counter = 60
 
 }
 
