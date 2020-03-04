@@ -1,10 +1,5 @@
-//function Game() {
-//$("#trivia").hide();
-///$("#time").hide();
-//}
 
 function startGame() {
-
     document.getElementById("trivia").style.visibility = "visible";
     document.getElementById("time").style.visibility = "visible";
     myTimer
@@ -12,9 +7,6 @@ function startGame() {
 }
 
 function checkAnswers() {
-    //made a variable for each question
-    //search entire document for quiz then question1 then value
-
     var correct = 0;
 
     //if correct answer is selected add 1 to correct answers
@@ -29,7 +21,6 @@ function checkAnswers() {
     if (document.getElementById("inlineRadio10").checked) {
         correct++;
         console.log("Days of Our Lives");
-
     }
 
     if (document.getElementById("inlineRadio14").checked) {
@@ -66,12 +57,16 @@ function checkAnswers() {
     document.getElementById("after-submit").style.visibility = "visible";
     document.getElementById("number-correct").innerHTML = "You got " + correct + " correct.";
     endGame()
+    reset()
 
 }
 function endGame() {
     clearInterval(myTimer)
     $("#trivia").hide();
+}
 
+function playAgain() {
+    startGame()
 }
 //timer
 var counter = 45
@@ -86,7 +81,7 @@ var myTimer = setInterval(function () {
     $("#time").text(counter)
     //to get the interval to start over again
     if (counter == 0) {
-        //reset()
+        reset()
         clearInterval(myTimer)
         $("#time").text("Time is up!")
         $("#trivia").hide();
