@@ -1,7 +1,11 @@
+function startGame() {
+    reset()
+}
+
 function checkAnswers() {
     //made a variable for each question
     //search entire document for quiz then question1 then value
-    var question1 = "hello";
+
     var correct = 0;
 
     //if correct answer is selected add 1 to correct answers
@@ -31,8 +35,12 @@ function checkAnswers() {
 
     document.getElementById("after-submit").style.visibility = "visible";
     document.getElementById("number-correct").innerHTML = "You got " + correct + " correct.";
-}
+    endGame()
 
+}
+function endGame() {
+    clearInterval(myTimer)
+}
 
 
 //timer
