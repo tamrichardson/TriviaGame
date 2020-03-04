@@ -71,9 +71,10 @@ function checkAnswers() {
 function endGame() {
     clearInterval(myTimer)
     $("#trivia").hide();
+
 }
 //timer
-var counter = 30
+var counter = 45
 
 var myTimer = setInterval(function () {
     //we want to count down from 30 to 0 each second 
@@ -88,13 +89,14 @@ var myTimer = setInterval(function () {
         //reset()
         clearInterval(myTimer)
         $("#time").text("Time is up!")
+        $("#trivia").hide();
     }
 }, 1000);
 
 function reset() {
     //calling myTimer to reset the interval and the counter
     myTimer
-    counter = 60
+    counter = 45
 
 }
 
