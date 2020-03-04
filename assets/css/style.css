@@ -67,14 +67,16 @@ height: 50%;
     font-size: 25px;
     font-family: 'Caveat';
   }
+
   header h1{
     text-align: center;
     color: black;
     font-size: 75px;
     font-family: 'Caveat';
    padding-top: 0;
+}
 
-  }
+
 .header-img {
    display: flow-root;
   width: 10%;
@@ -86,11 +88,24 @@ height: 50%;
     font-family: 'Caveat';
   }
 
+  h2 {
+    text-align: center;
+    color: yellow;
+    font-size: 50px;
+    font-family: 'Caveat';
+  }
+  
   #after-submit {
     visibility:hidden;
   }
 
+  #trivia {
+    visibility:hidden;
+  }
   
+  #time {
+    visibility:hidden;
+  }
   .card-columns {
   @include media-breakpoint-only(lg) {
     column-count: 4;

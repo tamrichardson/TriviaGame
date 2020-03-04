@@ -1,4 +1,13 @@
+//function Game() {
+//$("#trivia").hide();
+///$("#time").hide();
+//}
+
 function startGame() {
+
+    document.getElementById("trivia").style.visibility = "visible";
+    document.getElementById("time").style.visibility = "visible";
+    myTimer
     reset()
 }
 
@@ -40,9 +49,8 @@ function checkAnswers() {
 }
 function endGame() {
     clearInterval(myTimer)
+    $("#trivia").hide();
 }
-
-
 //timer
 var counter = 30
 
